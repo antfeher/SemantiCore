@@ -1,0 +1,42 @@
+version: '2.2'
+
+networks:
+  aicore-net:
+
+services:
+
+  nodejs:
+    container_name: nodejs
+    build:      
+      context: node
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    networks:
+      - aicore-net
+    ports:
+      - 3100:3100
+
+  apache:
+    container_name: apache
+    build:      
+      context: apache
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    networks:
+      - aicore-net
+    ports:
+      - 8080:80
+
+  graph:
+    container_name: graph
+    build:      
+      context: graph
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    networks:
+      - aicore-net
+    ports:
+      - 8080:8080
+
+
+

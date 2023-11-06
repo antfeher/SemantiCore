@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSV to Graph</title>
+</head>
+<body bgcolor=white>
+<center>
+<h1><font color=bgown>CSV =&gt; Graph</font></h1>
+
+<h3><font color=gray>Insert text - pairs of concepts separated by a semicolon:</font></h3>
+
+<p><form method="post" action="/cgi-bin/vizg.pl" id="usrform">
+
+<textarea name="csv" form="usrform" rows="30" cols="60"></textarea>
+<p>Links: <input type="radio" name="links" value="G" checked>Google&nbsp;
+<input type="radio" name="links" value="GN">Google&nbsp;News&nbsp;
+<input type="radio" name="links" value="B">Bing&nbsp;
+<input type="radio" name="links" value="BN">Bing&nbsp;News&nbsp;
+
+<p><input type="checkbox" name="direct" checked>Directed
+&nbsp;&nbsp;<input type="submit" value="Draw" name="act">
+</form>
+
+
+<table width=600><tr><td>
+<center><h3><font color=gray>Datasets:</font></h3></center>
+<ol>
+<li><a href="/datasets/cybersec.txt">Cyber Security</a>
+<li><a href="/datasets/infolaw.txt">Information Law</a>
+<li><a href="/datasets/torah_small.txt">Torah Actors</a>
+<li><a href="/datasets/nsec.txt">Threat to national security</a>
+<li><a href="/datasets/organized_crime.txt">Organized crime</a>
+<li><a href="/datasets/cyber_security_vulnerability.txt">Cyber security Vulnerability</a>
+</ol>
+</td></tr>
+<tr><td>
+<center><h3><font color=gray>Articles:</font></h3></center>
+<ol>
+
+</ol>
+</td></tr>
+</table>
+<br /><hr>
+&copy; Dmytro Lande, 2023
+</center>
+</body>
+</html>

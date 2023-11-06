@@ -1,0 +1,142 @@
+/* Global */
+body {
+  background-color: #F1F1F1;
+}
+
+
+/* Stylish Upload Button Styles */
+.upload-button {
+  display: inline-block;
+  padding: 8px 8px;
+  background-color: #006606;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #00990a;
+}
+
+.upload-button.active {
+  background-color: #004400;
+}
+
+.upload-button input[type="file"] {
+  display: none;
+}
+
+.upload-button label {
+  display: inline-block;
+  padding: 8px 8px;
+  background-color: #006606;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-button label:hover {
+  background-color: #00990a;
+}
+
+.upload-button label:active {
+  background-color: #004400;
+}
+
+/* CSS for search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
+}
+
+.search-container input[type="text"] {
+  padding: 15px;
+  width: 1050px;
+  border: 1px solid #006606;
+  border-radius: 5px;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #00990a !important;
+}
+
+/* CSS for text holder with tabs */
+.text-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab.active {
+  background-color: #006606;
+  color: #fff;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 5px;
+  width: 1150px;
+  text-align: center;
+}
+
+.content.active {
+  display: block;
+}
+
+.unformatted-output {
+  display: none;
+}
+
+/* Hide the file name display next to the "Choose File" button */
+.search-container input[type="file"] {
+  font-size: 0;
+  cursor: pointer;
+}
+
+/* Restore the font size for other input elements */
+.search-container input[type="text"] {
+  font-size: 16px;
+}
+
+/* Add this CSS to your stylesheet */
+.entry {
+  display: flex;
+  align-items: baseline; /* Align numeration and text on the same line */
+  margin-bottom: 5px; /* Adjust spacing between entries */
+}
+
+.numeration {
+  margin-right: 10px; /* Add spacing between numeration and text */
+  color: gray; /* Apply a different color to the numeration */
+  user-select: none; /* Make numeration unselectable */
+  opacity: 0.5; /* Apply shadowing effect */
+}
+
+.text {
+  margin-left: 40px; /* Adjust this margin based on your preference */
+}

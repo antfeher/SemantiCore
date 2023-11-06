@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI-Core</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  
+  <!-- Search bar -->
+  <div class="search-container">
+    <input type="text" placeholder="Enter your parse query" id="searchInput">
+    <div class="upload-button">
+      <input type="file" id="uploadFileInput" onchange="uploadTextFile()" accept="">
+      <label for="uploadFileInput">Choose File</label>
+    </div>
+  </div>
+
+  <!-- Text holder with tabs -->
+  <div class="text-holder">
+    <div class="tab-container">
+      <div class="tab active" onclick="return changeTab(1)">RAW ARTICLE</div>
+      <div class="tab" onclick="changeTab(2)">TRANSFORMED</div>
+      <div class="tab" onclick="changeTab(3)">GRAPH</div>
+    </div>
+    
+    <div class="content active" id="content-1">
+      <div class="text-editor" contenteditable="true">
+        <!-- The div below will hold the formatted output of Tab 1 -->
+        <pre class="formatted-output"></pre>
+
+        <!-- The div below will hold the unformatted output of Tab 1 -->
+        <div class="unformatted-output">
+          <p>This is a OpenAI middleware testing product.<br><br><br></p>
+          <p>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$<br></p>
+          <p>"RAW ARTICLE" tab shows raw text sequence, "TRANSFORMED" tab shows generated output for raw sequence by promt.<br></p>
+          <p>Considered fixed prompt is: <br> "Give 20 pairs of non-repetition entities from text, where each entity contains up to 4 words, represented as "entity1; entity2".<br>Place after each pair in newline".<br></p>
+          <p>Suposed usage:<br>Please provide link for the article to start a parse and generate output into form.<br>Following form is considered to be editable, you can make your own text sequence to process.<br></p>
+          <p>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$<br></p>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="content" id="content-2">
+      <!-- The div below will hold the initial content of Tab 2 -->
+      <pre class="transformed-output">Waiting output from OpenAI.</pre>
+    </div>
+    <div class="content" id="content-3">
+      <!-- Content for the "Graph" tab goes here -->
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
